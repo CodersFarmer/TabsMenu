@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.heima.yqz.tabmenuview.MainActivity">
+
+    <!--<com.heima.yqz.view.MyViewPager-->
+    <!--android:id="@+id/vp"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1">-->
+    <!--</com.heima.yqz.view.MyViewPager>-->
+    <!--开源库里的自定义控件-->
+    <com.viewpagerindicator.TabPageIndicator
+        android:id="@+id/tabPageIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv_pciasso"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </android.support.v4.view.ViewPager>
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_tab_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/tab_rb_style"
+            android:checked="true"
+            android:drawableTop="@drawable/home_image_selector"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/rb_news"
+            style="@style/tab_rb_style"
+            android:drawableTop="@drawable/news_image_selector"
+            android:text="新闻中心" />
+
+        <RadioButton
+            android:id="@+id/smart"
+            style="@style/tab_rb_style"
+            android:drawableTop="@drawable/smartservice_image_selector"
+            android:text="智慧服务" />
+
+        <RadioButton
+            android:id="@+id/goffer"
+            style="@style/tab_rb_style"
+            android:drawableTop="@drawable/goffer_image_selector"
+            android:text="政务" />
+
+        <RadioButton
+            android:id="@+id/setting"
+            style="@style/tab_rb_style"
+            android:drawableTop="@drawable/setting_image_selector"
+            android:text="设置" />
+    </RadioGroup>
+</LinearLayout>
